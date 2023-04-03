@@ -8,13 +8,16 @@ import org.openqa.selenium.support.PageFactory;
 public class CoreJavaDemoVideoPage {
 
 	// Declaration
+	@FindBy(xpath = "//a[@class='close_cookies']")
+	private WebElement closeCookiesIcon;
+	
 	@FindBy(xpath = "//h1[text()='Core Java For Selenium Training']")
 	private WebElement pageHeader;
 
-	@FindBy(xpath = "//button[@aria-label='Play']")
+	@FindBy(xpath = "//button[.='Play']")
 	private WebElement playButton;
 
-	@FindBy(xpath = "//button[@aria-label='Pause']")
+	@FindBy(xpath = "//button[.='Pause']")
 	private WebElement pauseButton;
 
 	@FindBy(xpath = "//span[text()='Add To Wishlist']")
@@ -40,6 +43,10 @@ public class CoreJavaDemoVideoPage {
 	
 	public void clickAddToWishList() {
 		addToWishlistButton.click();
+	}
+	
+	public void clickCloseCookies() {
+		closeCookiesIcon.click();
 	}
 
 }

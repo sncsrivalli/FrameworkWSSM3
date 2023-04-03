@@ -16,10 +16,12 @@ public class ThirdTest extends BaseClass{
 		coreJava.clickCoreJavaLink();
 		
 		soft.assertTrue(javaDemo.getPageHeader().isDisplayed());
+		javaDemo.clickCloseCookies();
 		web.switchToFrame(0);
 		javaDemo.clickPlayButton();
-		Thread.sleep(4000);
+		Thread.sleep(2000);
 		javaDemo.clickPauseButton();
+		web.switchBackFromFrame();
 		javaDemo.clickAddToWishList();
 		
 		soft.assertAll();
